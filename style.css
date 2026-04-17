@@ -1,0 +1,6 @@
+/* UTILIDADES */
+@import "./css/utilidades/cores.css";
+
+/* GLOBAL */
+@import "./css/global/global.css";
+@import "./css/global/navbar.css";
