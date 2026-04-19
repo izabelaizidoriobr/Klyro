@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amily=Outfit:wght@100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Klyro - Home</title>
@@ -16,7 +16,9 @@
 <body>
 
     <nav>
-        <ul>
+        <!-- SIDEBAR -->
+        <ul class="sidebar">
+            <li onclick="hideSidebar()"><a href="#">✖</a></li>
             <li class="logo"><a href="index.html">Klyro</a></li>
             <li><a href="#">Home</a></li>
             <li><a href="#">Projetos</a></li>
@@ -24,15 +26,45 @@
             <li><a href="#">Contato</a></li>
         </ul>
 
+        <!-- NAV NORMAL -->
         <ul>
             <li class="logo"><a href="index.html">Klyro</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Projetos</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Contato</a></li>
+            <li class="hideOnMobile"><a href="#">Home</a></li>
+            <li class="hideOnMobile"><a href="#">Projetos</a></li>
+            <li class="hideOnMobile"><a href="#">Sobre</a></li>
+            <li class="hideOnMobile"><a href="#">Contato</a></li>
+            <li class="menu-button" onclick="showSidebar()">
+                <a href="#" class="menuburger">☰</a>
+            </li>
         </ul>
     </nav>
 
+
+
+
+
+
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex';
+        }
+
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none';
+        }
+
+        /* FECHAR CLICANDO FORA */
+        document.addEventListener('click', function (event) {
+            const sidebar = document.querySelector('.sidebar');
+            const menuBtn = document.querySelector('.menu-button');
+
+            if (!sidebar.contains(event.target) && !menuBtn.contains(event.target)) {
+                sidebar.style.display = 'none';
+            }
+        });
+    </script>
 
 </body>
 

@@ -46,3 +46,55 @@ nav li:first-child a {
 nav li:first-child a:hover {
     background-color: transparent;
 }
+
+/* SIDEBAR */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(200, 200, 200, 0.196);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.menuburger {
+    font-weight: 800;
+    font-size: 20px;
+    color: #181818;
+}
+
+/* ESCONDE SIDEBAR INICIALMENTE */
+.sidebar {
+    display: none;
+}
+
+/* BOTÃO MENU */
+.menu-button {
+    display: none;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+}
