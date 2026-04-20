@@ -44,8 +44,8 @@
         <div class="hero_section">
             <div class="herotxt">
                 <h3 class="cor-7">Transformando ideias em produtos digitais</h3>
-                <h1 class="cor-15">Interfaces Modernas<br>
-                    Código Inteligente</h1>
+                <h1 class="cor-15"><span class="cor-p5">Interfaces</span> Modernas<br>
+                    Código <span class="cor-p7">Inteligente</span></h1>
                 <p class="cor-7">Criação de aplicações rápidas, responsivas e bem estruturadas, <br> com foco em
                     experiência
                     do usuário e
@@ -102,18 +102,27 @@
         </div>
     </div>
 
+    <!--CTA TEXT EFECTS-->
+    <section class="scroll-reveal">
+        <p class="reveal-text">
+            <span class="line cor-15">Unindo desenvolvimento e design, crio soluções digitais que vão além do visual,
+                <br> entregando desempenho e usabilidade.</span>
+            <span class="line cor-15">Entenda como isso pode fazer diferença no seu projeto.</span>
+        </p>
+    </section>
+
     <script>
+        /* =========================
+           SIDEBAR
+        ========================= */
         function showSidebar() {
-            const sidebar = document.querySelector('.sidebar');
-            sidebar.style.display = 'flex';
+            document.querySelector('.sidebar').style.display = 'flex';
         }
 
         function hideSidebar() {
-            const sidebar = document.querySelector('.sidebar');
-            sidebar.style.display = 'none';
+            document.querySelector('.sidebar').style.display = 'none';
         }
 
-        /* FECHAR CLICANDO FORA */
         document.addEventListener('click', function (event) {
             const sidebar = document.querySelector('.sidebar');
             const menuBtn = document.querySelector('.menu-button');
@@ -122,6 +131,29 @@
                 sidebar.style.display = 'none';
             }
         });
+
+
+        /* =========================
+           REVEAL 3 LINHAS (CORRETO)
+        ========================= */
+
+        const lines = document.querySelectorAll(".line");
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+
+                    lines.forEach((line, index) => {
+                        setTimeout(() => {
+                            line.classList.add("show");
+                        }, index * 400); // tempo entre linhas
+                    });
+
+                }
+            });
+        }, { threshold: 0.6 });
+
+        observer.observe(document.querySelector(".scroll-reveal"));
     </script>
 
 </body>
