@@ -2,6 +2,7 @@
     padding-top: 120px;
     padding-left: 80px;
     padding-right: 80px;
+    padding-bottom: 64px;
 }
 
 .hero_section {
@@ -103,11 +104,61 @@
     }
 }
 
+/*CARROSSEL AUTO PLAY */
+.carousel {
+    overflow: hidden;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.track {
+    display: flex;
+    width: max-content;
+    animation: scroll 25s linear infinite;
+}
+
+.group {
+    display: flex;
+    gap: 24px;
+    margin-left: 24px;
+}
+
+/* TAMANHO PADRÃO DAS CARDS */
+.card {
+    width: 300px;
+    height: 220px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* IMAGEM SEM DISTORCER */
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ANIMAÇÃO */
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+/* RESPONSIVIDADE */
+
 @media (max-width: 1024px) {
     .hero {
         padding-top: 100px;
         padding-left: 40px;
         padding-right: 40px;
+        padding-bottom: 32px;
     }
 
     .herotxt h1 {
@@ -125,6 +176,7 @@
         padding-top: 80px;
         padding-left: 20px;
         padding-right: 20px;
+        padding-bottom: 16px;
     }
 
     .herotxt h3 {
@@ -152,6 +204,15 @@
 
     .Btn-Container {
         padding: 2px 8px;
+    }
+
+    /* Carrosel */
+    .card {
+        width: 220px;
+        height: 142px;
+        flex-shrink: 0;
+        border-radius: 6px;
+        overflow: hidden;
     }
 }
 
