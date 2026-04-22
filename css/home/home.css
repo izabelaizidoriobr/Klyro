@@ -152,7 +152,7 @@
 /* TEXTO ANIMADO */
 
 .scroll-reveal {
-    padding-top: 64px;
+    padding-top: 120px;
     display: flex;
     justify-content: center;
 }
@@ -177,6 +177,68 @@
 .line.show {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* SERVIÇOS */
+.servicos {
+    margin-top: 120px;
+    display: grid;
+    place-items: center;
+    background-color: #ececec;
+}
+
+.servicos_section {
+    padding-top: 42px;
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-bottom: 42px;
+    place-items: center;
+}
+
+.servicos_txt h1 {
+    font-family: "Outfit", sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.servicos_sc_cards {
+    margin-top: 64px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 24px;
+    row-gap: 24px;
+}
+
+.serv_cards {
+    background-color: #f6f6f6;
+    padding: 24px;
+    width: 320px;
+    height: 180px;
+    border-radius: 12px;
+    border: 2px solid #95c89a;
+}
+
+.icone_card {
+    background-color: #b8dabb;
+    width: 54px;
+    height: 54px;
+    display: grid;
+    place-items: center;
+    border-radius: 100%;
+    margin-bottom: 22px;
+}
+
+.cardtxt h2 {
+    font-family: "Outfit", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.cardtxt p {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 /* RESPONSIVIDADE */
@@ -213,6 +275,46 @@
         line-height: 28px;
         font-size: 22px;
         text-align: center;
+    }
+
+    /* SERVIÇOS */
+    .servicos {
+        margin-top: 72px;
+    }
+
+    .servicos_section {
+        padding-top: 42px;
+        padding-left: 80px;
+        padding-right: 80px;
+        padding-bottom: 42px;
+    }
+
+    .servicos_sc_cards {
+        margin-top: 42px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 22px;
+        row-gap: 22px;
+    }
+
+    .serv_cards {
+        width: 300px;
+        height: 140px;
+        padding: 24px;
+    }
+
+    .icone_card {
+        width: 42px;
+        height: 42px;
+        margin-bottom: 16px;
+    }
+
+    .cardtxt h2 {
+        font-size: 16px;
+    }
+
+    .cardtxt p {
+        font-size: 14px;
     }
 }
 
@@ -268,6 +370,53 @@
         max-width: 700;
         line-height: 22px;
         font-size: 18px;
+    }
+
+    /* SERVIÇOS */
+    .servicos {
+        margin-top: 44px;
+    }
+
+    .servicos_txt h1 {
+        font-size: 24px;
+    }
+
+    .servicos_section {
+        padding-top: 44px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 44px;
+    }
+
+    .servicos_sc_cards {
+        margin-top: 32px;
+        grid-template-columns: 1fr;
+        row-gap: 22px;
+    }
+
+    .serv_cards {
+        width: 350px;
+        height: 132px;
+        padding: 18px;
+    }
+
+    .icone_card img {
+        width: 100%;
+        height: 20px;
+    }
+
+    .icone_card {
+        width: 42px;
+        height: 42px;
+        margin-bottom: 16px;
+    }
+
+    .cardtxt h2 {
+        font-size: 16px;
+    }
+
+    .cardtxt p {
+        font-size: 14px;
     }
 }
 
