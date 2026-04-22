@@ -180,6 +180,7 @@
 }
 
 /* SERVIÇOS */
+
 .servicos {
     margin-top: 120px;
     display: grid;
@@ -189,9 +190,8 @@
 
 .servicos_section {
     padding-top: 42px;
-    padding-left: 120px;
-    padding-right: 120px;
     padding-bottom: 42px;
+    display: grid;
     place-items: center;
 }
 
@@ -201,23 +201,59 @@
     font-weight: 800;
 }
 
+/* GRID DOS CARDS */
 .servicos_sc_cards {
-    margin-top: 64px;
+    margin-top: 42px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 24px;
     row-gap: 24px;
 }
 
+/* CARD */
 .serv_cards {
     background-color: #f6f6f6;
     padding: 24px;
-    width: 320px;
-    height: 180px;
+    width: 340px;
+    height: auto;
     border-radius: 12px;
     border: 2px solid #95c89a;
+
+    /* EFEITOS */
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
 }
 
+/* BRILHO ANIMADO */
+.serv_cards::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, 0.4),
+            transparent);
+    transition: 0.5s;
+}
+
+/* HOVER DO CARD */
+.serv_cards:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    border-color: #1c6123;
+}
+
+/* BRILHO PASSANDO */
+.serv_cards:hover::before {
+    left: 100%;
+}
+
+/* ÍCONE */
 .icone_card {
     background-color: #b8dabb;
     width: 54px;
@@ -226,19 +262,39 @@
     place-items: center;
     border-radius: 100%;
     margin-bottom: 22px;
+
+    transition: all 0.3s ease;
 }
 
+/* ANIMAÇÃO DO ÍCONE */
+.serv_cards:hover .icone_card {
+    transform: scale(1.1) rotate(5deg);
+    background-color: #95c89a;
+}
+
+/* TEXTO */
 .cardtxt h2 {
     font-family: "Outfit", sans-serif;
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 8px;
+    transition: 0.3s;
 }
 
 .cardtxt p {
     font-family: "Inter", sans-serif;
     font-size: 16px;
     font-weight: 500;
+    transition: 0.3s;
+}
+
+/* HOVER TEXTO */
+.serv_cards:hover h2 {
+    color: #1c6123;
+}
+
+.serv_cards:hover p {
+    color: #444;
 }
 
 /* RESPONSIVIDADE */
@@ -299,7 +355,7 @@
 
     .serv_cards {
         width: 300px;
-        height: 140px;
+        height: auto;
         padding: 24px;
     }
 
@@ -360,7 +416,7 @@
 
     .card {
         width: 220px;
-        height: 142px;
+        height: auto;
         flex-shrink: 0;
         border-radius: 6px;
         overflow: hidden;
