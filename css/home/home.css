@@ -297,6 +297,161 @@
     color: #444;
 }
 
+/* PROJETOS SELECIONADOS */
+
+.projcts_section {
+    margin-top: 120px;
+    padding-left: 80px;
+    padding-right: 80px;
+    display: grid;
+    place-items: center;
+}
+
+.projs_txt h1 {
+    font-family: "Outfit", sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    text-align: center;
+}
+
+/* GRID */
+.projects_cards {
+    margin-top: 42px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+/* CARD BASE */
+.cards_projs_sc {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+/* IMAGEM */
+.cards_projs_sc img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 12px;
+
+    transition: transform 0.5s ease, filter 0.4s ease;
+
+    filter: brightness(0.6);
+    /* deixa mais escura */
+}
+
+/* OVERLAY + CONTEÚDO */
+.card_proj_cont {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 24px;
+
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.3),
+            transparent);
+
+    transform: translateY(40px);
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+/* TÍTULO */
+.card_proj_cont h2 {
+    font-family: "Outfit", sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    transition: 0.3s;
+}
+
+/* TEXTO */
+.card_proj_cont p {
+    font-family: "Inter", sans-serif;
+    max-width: 560px;
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 16px;
+    transition: 0.3s;
+}
+
+/* TAGS */
+.Card_class {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.Card_class span {
+    background-color: #b8dabb;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+    transition: all 0.3s ease;
+}
+
+/* BRILHO (igual serviços) */
+.cards_projs_sc::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent);
+    transition: 0.6s;
+    z-index: 2;
+}
+
+/* ===== HOVER ===== */
+
+/* Elevação */
+.cards_projs_sc:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Zoom imagem */
+.cards_projs_sc:hover img {
+    transform: scale(1.1);
+}
+
+/* Mostrar conteúdo */
+.cards_projs_sc:hover .card_proj_cont {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Brilho passando */
+.cards_projs_sc:hover::before {
+    left: 100%;
+}
+
+/* Cor no hover */
+.cards_projs_sc:hover h2 {
+    color: #b2b2b2;
+}
+
+.cards_projs_sc:hover .Card_class span {
+    background-color: #1c6123;
+    color: #acacac;
+}
+
+.projects_sc {
+    margin-bottom: 42px;
+}
+
 /* RESPONSIVIDADE */
 
 @media (max-width: 1024px) {
@@ -371,6 +526,33 @@
 
     .cardtxt p {
         font-size: 14px;
+    }
+
+    /* PROJETOS */
+    .projcts_section {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .projects_cards {
+        grid-template-columns: 1fr;
+    }
+
+    .cards_projs_sc img {
+        height: 360px;
+    }
+
+    .card_proj_cont {
+        padding: 20px;
+    }
+
+    .card_proj_cont h2 {
+        font-size: 20px;
+    }
+
+    .card_proj_cont p {
+        font-size: 14px;
+        max-width: 440px;
     }
 }
 
@@ -474,6 +656,39 @@
     .cardtxt p {
         font-size: 14px;
     }
+
+    /* PROJETOS */
+    .projcts_section {
+        margin-top: 72px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .projs_txt h1 {
+        font-size: 24px;
+    }
+
+    .projects_cards {
+        margin-top: 32px;
+        gap: 20px;
+    }
+
+    .cards_projs_sc img {
+        height: 300px;
+    }
+
+    .card_proj_cont {
+        padding: 18px;
+    }
+
+    .card_proj_cont h2 {
+        font-size: 18px;
+    }
+
+    .card_proj_cont p {
+        font-size: 14px;
+        max-width: 400px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -503,5 +718,28 @@
 
     .Btn-Container {
         padding: 2px 4px;
+    }
+
+    /* PROJETOS */
+    .cards_projs_sc img {
+        height: 240px;
+    }
+
+    .card_proj_cont {
+        padding: 14px;
+    }
+
+    /* limpa visual no mobile */
+    .card_proj_cont p {
+        display: none;
+    }
+
+    .Card_class {
+        gap: 8px;
+    }
+
+    .Card_class span {
+        font-size: 12px;
+        padding: 5px 10px;
     }
 }
