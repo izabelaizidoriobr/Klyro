@@ -299,6 +299,10 @@
 
 /* PROJETOS SELECIONADOS */
 
+/* =========================
+   PROJETOS SELECIONADOS
+========================= */
+
 .projcts_section {
     margin-top: 120px;
     padding-left: 80px;
@@ -341,7 +345,6 @@
     transition: transform 0.5s ease, filter 0.4s ease;
 
     filter: brightness(0.6);
-    /* deixa mais escura */
 }
 
 /* OVERLAY + CONTEÚDO */
@@ -353,32 +356,35 @@
     padding: 24px;
 
     background: linear-gradient(to top,
-            rgba(0, 0, 0, 0.75),
-            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 0.4),
             transparent);
 
-    transform: translateY(40px);
-    opacity: 0;
+    transform: translateY(60px);
     transition: all 0.4s ease;
 }
 
-/* TÍTULO */
+/* TÍTULO (sempre visível) */
 .card_proj_cont h2 {
     font-family: "Outfit", sans-serif;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 800;
     margin-bottom: 8px;
-    transition: 0.3s;
+    color: #fff;
 }
 
-/* TEXTO */
+/* TEXTO (escondido inicialmente) */
 .card_proj_cont p {
     font-family: "Inter", sans-serif;
     max-width: 560px;
     font-size: 15px;
     font-weight: 400;
     margin-bottom: 16px;
-    transition: 0.3s;
+
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    color: #eaeaea;
 }
 
 /* TAGS */
@@ -386,6 +392,10 @@
     display: flex;
     gap: 12px;
     flex-wrap: wrap;
+
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
 }
 
 .Card_class span {
@@ -398,7 +408,7 @@
     transition: all 0.3s ease;
 }
 
-/* BRILHO (igual serviços) */
+/* BRILHO */
 .cards_projs_sc::before {
     content: "";
     position: absolute;
@@ -422,15 +432,22 @@
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
-/* Zoom imagem */
+/* Zoom + escurece mais */
 .cards_projs_sc:hover img {
     transform: scale(1.1);
+    filter: brightness(0.4);
 }
 
-/* Mostrar conteúdo */
+/* Sobe conteúdo */
 .cards_projs_sc:hover .card_proj_cont {
     transform: translateY(0);
+}
+
+/* Mostrar texto */
+.cards_projs_sc:hover p,
+.cards_projs_sc:hover .Card_class {
     opacity: 1;
+    transform: translateY(0);
 }
 
 /* Brilho passando */
@@ -438,14 +455,10 @@
     left: 100%;
 }
 
-/* Cor no hover */
-.cards_projs_sc:hover h2 {
-    color: #b2b2b2;
-}
-
+/* Tags no hover */
 .cards_projs_sc:hover .Card_class span {
     background-color: #1c6123;
-    color: #acacac;
+    color: #fff;
 }
 
 .projects_sc {
