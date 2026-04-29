@@ -299,10 +299,6 @@
 
 /* PROJETOS SELECIONADOS */
 
-/* =========================
-   PROJETOS SELECIONADOS
-========================= */
-
 .projcts_section {
     margin-top: 120px;
     padding-left: 80px;
@@ -740,11 +736,6 @@
 
     .card_proj_cont {
         padding: 14px;
-    }
-
-    /* limpa visual no mobile */
-    .card_proj_cont p {
-        display: none;
     }
 
     .Card_class {
