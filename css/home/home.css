@@ -56,6 +56,10 @@
     border: none;
 
     transition: transform 0.2s ease;
+
+    /* Ajustes para link */
+    text-decoration: none;
+    width: fit-content;
 }
 
 .Btn-Container:hover {
@@ -67,19 +71,25 @@
     width: 42px;
     height: 42px;
     background-color: #4ea356;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     border-radius: 50%;
     border: 3px solid #1d2129;
+
+    flex-shrink: 0;
 }
 
 /* Texto */
 .text {
+    font-family: "Inter", sans-serif;
     color: #f6f6f6;
     font-size: 1rem;
     padding: 0 6px;
     letter-spacing: 1px;
+    white-space: nowrap;
 }
 
 /* Animação */
