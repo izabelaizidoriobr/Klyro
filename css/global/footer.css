@@ -1,0 +1,158 @@
+.footer {
+    margin-top: 120px;
+    background-color: #0e3011;
+    padding: 72px 80px 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 42px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* LOGO */
+.footer-brand h2 {
+    font-family: "Outfit", sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: #f6f6f6;
+    margin-bottom: 20px;
+}
+
+.footer-brand p {
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    line-height: 28px;
+    color: #b8dabb;
+    max-width: 360px;
+}
+
+/* TITULOS */
+.footer-links h3,
+.footer-contact h3 {
+    font-family: "Outfit", sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* LISTAS */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 14px;
+}
+
+/* LINKS */
+.footer-links a,
+.footer-contact a {
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    color: #b8dabb;
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+    color: #4ea356;
+}
+
+/* CONTATO */
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* REDES */
+.footer-socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 8px;
+}
+
+/* BOTTOM */
+.footer-bottom {
+    margin-top: 54px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: #95c89a;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 1024px) {
+
+    .footer {
+        padding: 64px 40px 24px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 42px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .footer {
+        margin-top: 72px;
+        padding: 54px 20px 24px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .footer-brand h2 {
+        font-size: 28px;
+    }
+
+    .footer-brand p {
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .footer-links h3,
+    .footer-contact h3 {
+        font-size: 17px;
+        margin-bottom: 16px;
+    }
+
+    .footer-bottom {
+        margin-top: 42px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .footer {
+        padding: 48px 16px 20px;
+    }
+
+    .footer-brand h2 {
+        font-size: 24px;
+    }
+
+    .footer-bottom p {
+        font-size: 13px;
+    }
+}

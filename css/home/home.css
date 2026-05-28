@@ -515,6 +515,48 @@
     margin-bottom: 64px;
 }
 
+/* CONTAO */
+.contact {
+    margin-top: 120px;
+    padding-left: 80px;
+    padding-right: 80px;
+    max-width: 1200vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-section {
+    justify-items: center;
+}
+
+.contact-txt {
+    display: grid;
+    place-items: center;
+}
+
+.contact-txt h3 {
+    background-color: #4ea356;
+    width: 100px;
+    border-radius: 30px;
+    padding: 8px;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 24px;
+}
+
+.contact-txt h1 {
+    font-family: "Outfit", sans-serif;
+    font-size: 44px;
+    line-height: 58px;
+    font-weight: 800;
+    margin-bottom: 42px;
+    letter-spacing: -1px;
+    text-align: center;
+}
+
 /* RESPONSIVIDADE */
 
 @media (max-width: 1024px) {
@@ -792,6 +834,22 @@
     .center-geral-btn {
         justify-self: center;
     }
+
+    /* CONTAO */
+    .contact {
+        margin-top: 72px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .contact-txt h3 {
+        font-size: 16px;
+    }
+
+    .contact-txt h1 {
+        font-size: 42px;
+        line-height: 38px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -843,8 +901,20 @@
 
     /* SOBRE MIM */
     .about {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    /* CONTAO */
+    .contact {
+        margin-top: 72px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .contact-txt h1 {
+        font-size: 32px;
+        line-height: 32px;
     }
 
 }
