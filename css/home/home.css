@@ -796,13 +796,10 @@
     }
 
     /* SOBRE MIM */
-    .about {
+    .sobre_section {
         margin-top: 72px;
         padding-left: 42px;
         padding-right: 42px;
-    }
-
-    .sobre_section {
         display: grid;
         justify-items: center;
     }
@@ -900,7 +897,7 @@
     }
 
     /* SOBRE MIM */
-    .about {
+    .sobre_section {
         padding-left: 32px;
         padding-right: 32px;
     }
