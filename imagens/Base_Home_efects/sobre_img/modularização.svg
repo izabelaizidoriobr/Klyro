@@ -1,0 +1,29 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="moduleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1"></stop>
+      <stop offset="100%" stop-color="#4F46E5"></stop>
+    </linearGradient>
+  </defs>
+
+  <!-- Conexões -->
+  <line x1="180" y1="180" x2="332" y2="180" stroke="url(#moduleGradient)" stroke-width="16" stroke-linecap="round"></line>
+
+  <line x1="180" y1="180" x2="180" y2="332" stroke="url(#moduleGradient)" stroke-width="16" stroke-linecap="round"></line>
+
+  <line x1="332" y1="180" x2="332" y2="332" stroke="url(#moduleGradient)" stroke-width="16" stroke-linecap="round"></line>
+
+  <line x1="180" y1="332" x2="332" y2="332" stroke="url(#moduleGradient)" stroke-width="16" stroke-linecap="round"></line>
+
+  <!-- Módulos -->
+  <rect x="120" y="120" width="120" height="120" rx="20" fill="url(#moduleGradient)"></rect>
+
+  <rect x="272" y="120" width="120" height="120" rx="20" fill="url(#moduleGradient)"></rect>
+
+  <rect x="120" y="272" width="120" height="120" rx="20" fill="url(#moduleGradient)"></rect>
+
+  <rect x="272" y="272" width="120" height="120" rx="20" fill="url(#moduleGradient)"></rect>
+
+  <!-- Centro -->
+  <circle cx="256" cy="256" r="24" fill="#FFFFFF"></circle>
+</svg>

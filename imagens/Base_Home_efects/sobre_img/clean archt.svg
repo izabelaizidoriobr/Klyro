@@ -1,0 +1,29 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cleanGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB"></stop>
+      <stop offset="100%" stop-color="#1D4ED8"></stop>
+    </linearGradient>
+  </defs>
+
+  <!-- Círculo externo -->
+  <circle cx="256" cy="256" r="180" fill="none" stroke="url(#cleanGradient)" stroke-width="18"></circle>
+
+  <!-- Círculo 2 -->
+  <circle cx="256" cy="256" r="130" fill="none" stroke="url(#cleanGradient)" stroke-width="18" opacity="0.85"></circle>
+
+  <!-- Círculo 3 -->
+  <circle cx="256" cy="256" r="80" fill="none" stroke="url(#cleanGradient)" stroke-width="18" opacity="0.7"></circle>
+
+  <!-- Núcleo -->
+  <circle cx="256" cy="256" r="32" fill="url(#cleanGradient)"></circle>
+
+  <!-- Setas indicando dependência para dentro -->
+  <path d="M256 110 L242 135 L270 135 Z" fill="#2563EB"></path>
+
+  <path d="M402 256 L377 242 L377 270 Z" fill="#2563EB"></path>
+
+  <path d="M256 402 L242 377 L270 377 Z" fill="#2563EB"></path>
+
+  <path d="M110 256 L135 242 L135 270 Z" fill="#2563EB"></path>
+</svg>

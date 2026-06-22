@@ -8,3 +8,7 @@
 
 /* HOME */
 @import "./css/home/home.css";
+
+/* PAGES */
+@import "/css/pages/about.css";
+@import"/css/pages/contact.css";

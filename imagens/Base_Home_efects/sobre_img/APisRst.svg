@@ -1,0 +1,21 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0EA5E9"></stop>
+      <stop offset="100%" stop-color="#2563EB"></stop>
+    </linearGradient>
+  </defs>
+
+  <!-- Círculo principal -->
+  <circle cx="256" cy="256" r="180" fill="url(#grad)"></circle>
+
+  <!-- Nós -->
+  <circle cx="180" cy="180" r="22" fill="white"></circle>
+  <circle cx="332" cy="180" r="22" fill="white"></circle>
+  <circle cx="256" cy="332" r="22" fill="white"></circle>
+
+  <!-- Conexões -->
+  <line x1="180" y1="180" x2="332" y2="180" stroke="white" stroke-width="12" stroke-linecap="round"></line>
+  <line x1="180" y1="180" x2="256" y2="332" stroke="white" stroke-width="12" stroke-linecap="round"></line>
+  <line x1="332" y1="180" x2="256" y2="332" stroke="white" stroke-width="12" stroke-linecap="round"></line>
+</svg>
